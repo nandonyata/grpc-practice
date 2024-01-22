@@ -56,4 +56,8 @@ func main() {
 	}
 
 	fmt.Println("Data after unmarshal: ", dataAfter)
+
+	for _, v := range dataAfter.GetData() {
+		fmt.Println(v.GetName(), v.GetCategory().GetName())
+	}
 }
